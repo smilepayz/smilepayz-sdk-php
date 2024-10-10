@@ -38,6 +38,12 @@ $merchantReq = array(
     'merchantId' => $merchantId
 );
 
+//$additionalParam
+$additionalParam = array(
+    'payerAccountNo' => '0123456789'
+);
+
+
 
 //$payinReq
 $payinReq = array(
@@ -45,6 +51,7 @@ $payinReq = array(
     'purpose' => $purpose,
     'money' => $moneyReq,
     'merchant' => $merchantReq,
+    'additionalParam' => $additionalParam,
     'paymentMethod' => "W_DANA",
     'area' => INDONESIA_CODE,
 );

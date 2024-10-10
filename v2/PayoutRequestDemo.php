@@ -42,7 +42,9 @@ $merchantReq = array(
 );
 
 $additionalParam = array(
-    'ifscCode' => "YESB0000097"
+    'ifscCode' => "YESB0000097",
+    'taxNumber' => "123456789"
+
 );
 //$payinReq
 $payinReq = array(
