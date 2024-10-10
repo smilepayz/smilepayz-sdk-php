@@ -42,7 +42,9 @@ $merchantReq = array(
 );
 
 $additionalParam = array(
+    //this is required for INR
     'ifscCode' => "YESB0000097",
+    //this is required for BRL
     'taxNumber' => "123456789"
 
 );

@@ -6,7 +6,9 @@ include "ConstantV2.php";
 //url
 //production
 $requestPath = BASE_URL . "/v2.0/transaction/pay-in";
+//need to change this to your merchantId
 $merchantId = MERCHANT_ID;
+//you can get merchant_secret  data in back end when you log in back end
 $merchantSecret = MERCHANT_SECRET;
 
 //sandbox
@@ -35,11 +37,13 @@ $moneyReq = array(
 
 //$merchantReq
 $merchantReq = array(
-    'merchantId' => $merchantId
+    'merchantId' => $merchantId,
+    'merchantName' => 'your merchant name'
 );
 
 //$additionalParam
 $additionalParam = array(
+    //it's required for THB order
     'payerAccountNo' => '0123456789'
 );
 
