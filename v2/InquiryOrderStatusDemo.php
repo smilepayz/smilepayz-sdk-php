@@ -25,8 +25,8 @@ echo "timestamp=" . $timestamp . PHP_EOL;
 //generate parameter $inquiryOrderStatusReq
 $inquiryOrderStatusReq = array(
     'tradeType' => TRADE_TYPE_PAY_OUT,
-    'tradeNo' => '112200182402261848252600',
-    'orderNo' => 'D_1708948105016'
+    'tradeNo' => 'platform trade no',
+    'orderNo' => 'merchant order no'
 );
 $signUtils = new Signature();
 

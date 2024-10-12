@@ -26,10 +26,10 @@ $signUtils = new Signature();
 $merchantOrderNo =  str_replace("sandbox-","S",$merchantId). $signUtils->uuidv4();
 
 $purpose = "Purpose For Disbursement from PHP SDK";
+
+//fixme demo for INDONESIA ,replace $paymentMethod ,$cashAccount,currency to you what need
 $paymentMethod = "YES";
 $cashAccount = "17385238451";
-
-
 //$moneyReq
 $moneyReq = array(
     'currency' => CURRENCY_INR,
@@ -49,6 +49,7 @@ $additionalParam = array(
 
 );
 //$payinReq
+//fixme demo for INDONESIA ,replace INDONESIA_CODE ,paymentMethod  to you what need
 $payinReq = array(
     'orderNo' => substr($merchantOrderNo,0,32),
     'purpose' => $purpose,
@@ -57,7 +58,7 @@ $payinReq = array(
     'merchant' => $merchantReq,
     'paymentMethod' => $paymentMethod,
     'cashAccount' => $cashAccount,
-    'area' => INDIA_CODE,
+    'area' => INDONESIA_CODE,
 
 );
 

@@ -31,7 +31,7 @@ $purpose = "Purpose For Transaction from PHP SDK";
 
 //$moneyReq
 $moneyReq = array(
-    'currency' => 'one of INR/IDR/THB/BRL',
+    'currency' => 'one of INR/IDR/THB/BRL/MXN',
     'amount' => 10000
 );
 
@@ -43,7 +43,7 @@ $merchantReq = array(
 
 //$additionalParam
 $additionalParam = array(
-    //it's required for THB order
+    //fixme it's required for THB order
     'payerAccountNo' => 'the payer bank account no '
 );
 
@@ -56,7 +56,7 @@ $payinReq = array(
     'money' => $moneyReq,
     'merchant' => $merchantReq,
     'additionalParam' => $additionalParam,
-    //demo for INDONESIA ,replace paymentMethod ,area to you what need
+    //fixme demo for INDONESIA ,replace paymentMethod ,area to you what need
     'paymentMethod' => "payment method you need",
     'area' => 'the area code',
 );
