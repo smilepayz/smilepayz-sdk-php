@@ -17,8 +17,6 @@ class Signature
     public function sha256RsaSignature($signToStr,$privateKey){
         $privateKeyPem = chunk_split($privateKey, 64);
         $privateKeyPem = "-----BEGIN PRIVATE KEY-----\n" . $privateKeyPem . "-----END PRIVATE KEY-----\n";
-        echo $privateKeyPem . PHP_EOL;
-
         $r = openssl_sign($signToStr, $signature, $privateKeyPem, OPENSSL_ALGO_SHA256);
         $signatureValue = base64_encode($signature) ;
         echo "signatureValue=" . $signatureValue . PHP_EOL;
