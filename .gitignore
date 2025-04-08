@@ -1,0 +1,25 @@
+### JetBrains IDE ###
+.idea/
+*.iml
+
+### Composer ###
+/vendor/
+/composer.lock
+
+### PHP ###
+*.php~
+*.swp
+*.swo
+
+### Logs ###
+*.log
+/logs/
+
+### OS-specific ###
+.DS_Store
+Thumbs.db
+
+### Others ###
+/node_modules/
+/tmp/
+/config/parameters.yml

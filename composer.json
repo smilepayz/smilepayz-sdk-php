@@ -1,0 +1,6 @@
+{
+  "require": {
+    "ext-openssl": "*",
+    "ext-curl": "*"
+  }
+}
