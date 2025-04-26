@@ -6,10 +6,17 @@ include "ConstantV2.php";
 class PayoutRequestDemo
 {
 
-    public function doDisbursement($env, $merchant_id, $merchant_secret,
-                                   $private_key, $payment_method, $cash_account,
-                                   $amount ,$account_type)
+    public function doDisbursement($params)
     {
+        $env = $params['env'];
+        $merchant_id = $params['merchant_id'];
+        $merchant_secret = $params['merchant_secret'];
+        $private_key = $params['private_key'];
+        $payment_method = $params['payment_method'];
+        $cash_account = $params['cash_account'];
+        $amount = $params['amount'];
+        $account_type = $params['account_type'];
+
         //production
         $requestPath = "";
         if ($env == "production") {
@@ -126,7 +133,16 @@ try {
     $account_type = "CORRIENTE";
     $redirect_url = "https://docs.smilepayz.com";
     $callback_url = "https://docs.smilepayz.com";
-    $obj->doDisbursement($env, $merchant_id, $merchant_secret, $private_key,$payment_method, $cash_account, $amount,$account_type);
+    $obj->doDisbursement([
+        'env' => $env,
+        'merchant_id' => $merchant_id,
+        'merchant_secret' => $merchant_secret, 
+        'private_key' => $private_key,
+        'payment_method' => $payment_method, 
+        'cash_account' => $cash_account, 
+        'amount' => $amount,
+        'account_type' => $account_type
+    ]);
 } catch (Exception $e) {
     echo 'doDisbursement error' . $e;
 }

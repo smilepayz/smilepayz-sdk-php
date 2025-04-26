@@ -7,10 +7,21 @@ class PayInRequestDemo
     /**
      * @throws Exception
      */
-    public function doTransaction($env, $merchant_id, $merchant_secret,
-                                  $private_key, $payment_method, $payer_name,
-                                  $amount, $redirect_url, $callback_url)
+    public function doTransaction($params)
     {
+        $env = $params['env'];
+        $merchant_id = $params['merchant_id'];
+        $merchant_secret = $params['merchant_secret'];
+        $private_key = $params['private_key'];
+        $payment_method = $params['payment_method'];
+        $payer_name = $params['payer_name'];
+        $payer_id_type = $params['payer_id_type'];
+        $payer_id = $params['payer_id'];
+        $payer_phone = $params['payer_phone'];
+        $payer_email = $params['payer_email'];
+        $amount = $params['amount'];
+        $redirect_url = $params['redirect_url'];
+        $callback_url = $params['callback_url'];
 
         //production
         $requestPath = "";
@@ -48,7 +59,11 @@ class PayInRequestDemo
 
         //$payer_req
         $payer_req = array(
-            'name' => $payer_name
+            'idType' => $payer_id_type,
+            'identity' => $payer_id,
+            'name' => $payer_name,
+            'phone' => $payer_phone,
+            'email' => $payer_email,
         );
 
 
@@ -127,12 +142,28 @@ try {
     $private_key = "";
     $payment_method = "CASHIER_PE";
     $payer_name = "test";
+    $payer_id_type = "DNI";
+    $payer_id = "122323232";
+    $payer_phone = "123232";
+    $payer_email = "ffa@gmai.com";
     $amount = 100;
     $redirect_url = "https://docs.smilepayz.com";
     $callback_url = "https://docs.smilepayz.com";
-    $obj->doTransaction($env, $merchant_id, $merchant_secret,
-        $private_key, $payment_method, $payer_name,
-        $amount, $redirect_url, $callback_url);
+    $obj->doTransaction([
+        'env' => $env,
+        'merchant_id' => $merchant_id,
+        'merchant_secret' => $merchant_secret,
+        'private_key' => $private_key,
+        'payment_method' => $payment_method,
+        'payer_name' => $payer_name,
+        'payer_id_type' => $payer_id_type,
+        'payer_id' => $payer_id,
+        'payer_phone' => $payer_phone,
+        'payer_email' => $payer_email,
+        'amount' => $amount,
+        'redirect_url' => $redirect_url,
+        'callback_url' => $callback_url
+    ]);
 } catch (Exception $e) {
     echo 'do transaction error' . $e;
 }
