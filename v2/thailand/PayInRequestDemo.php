@@ -62,7 +62,6 @@ class PayInRequestDemo
             'merchant' => $merchantReq,
             'payer' => $payer_req,
             'paymentMethod' => $payment_method,
-            'area' => THAILAND_CODE,
         );
 
         //json

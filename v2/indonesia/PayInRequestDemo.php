@@ -60,7 +60,6 @@ class PayInRequestDemo
             'merchant' => $merchantReq,
             'payer' => $payer_req,
             'paymentMethod' => $payment_method,
-            'area' => INDONESIA_CODE,
             'redirectUrl' => $redirect_url,
             'callbackUrl' => $callback_url,
         );

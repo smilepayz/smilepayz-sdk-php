@@ -12,16 +12,6 @@ const CURRENCY_PEN = "PEN";
 const CURRENCY_COL = "COL";
 const CURRENCY_CLP = "CLP";
 
-const INDONESIA_CODE = 10;
-const THAILAND_CODE = 11;
-const INDIA_CODE = 12;
-const BRAZIL_CODE = 13;
-
-const MEXICO_CODE = 14;
-const PERU_CODE = 15;
-const COLOMBIA_CODE = 16;
-const CHILE_CODE = 17;
-
 
 const TRADE_TYPE_PAY_IN = 1;
 const TRADE_TYPE_PAY_OUT = 2;

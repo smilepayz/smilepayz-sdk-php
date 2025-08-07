@@ -56,8 +56,6 @@ class PayoutRequestDemo
             'paymentMethod' => $paymentMethod,
             'cashAccount' => $cash_account,
             'cashAccountType' => $account_type,
-            'area' => COLOMBIA_CODE,
-
         );
 
         //json

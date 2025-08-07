@@ -59,7 +59,6 @@ class PayoutRequestDemo
             'paymentMethod' => $paymentMethod,
             'cashAccount' => $cash_account,
             'receiver' => $receiver_Req,
-            'area' => BRAZIL_CODE,
 
         );
 

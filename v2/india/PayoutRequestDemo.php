@@ -56,8 +56,6 @@ class PayoutRequestDemo
             'paymentMethod' => $paymentMethod,
             'cashAccount' => $cash_account,
             'ifscCode' => $ifsc_code,
-            'area' => INDIA_CODE,
-
         );
 
         //json

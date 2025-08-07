@@ -54,8 +54,6 @@ class PayoutRequestDemo
             'merchant' => $merchantReq,
             'paymentMethod' => $paymentMethod,
             'cashAccount' => $cash_account,
-            'area' => INDONESIA_CODE,
-
         );
 
         //json

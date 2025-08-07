@@ -63,8 +63,6 @@ class PayoutRequestDemo
             'paymentMethod' => $paymentMethod,
             'cashAccount' => $cash_account,
             'cashAccountType' => $account_type,
-            'area' => PERU_CODE,
-
         );
 
         //json

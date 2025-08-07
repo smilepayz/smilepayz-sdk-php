@@ -53,7 +53,6 @@ class PayInRequestDemo
             'money' => $moneyReq,
             'merchant' => $merchantReq,
             'paymentMethod' => $payment_method,
-            'area' => MEXICO_CODE,
         );
 
         //json
