@@ -136,10 +136,10 @@ try {
     $obj->doDisbursement([
         'env' => $env,
         'merchant_id' => $merchant_id,
-        'merchant_secret' => $merchant_secret, 
+        'merchant_secret' => $merchant_secret,
         'private_key' => $private_key,
-        'payment_method' => $payment_method, 
-        'cash_account' => $cash_account, 
+        'payment_method' => $payment_method,
+        'cash_account' => $cash_account,
         'amount' => $amount,
         'account_type' => $account_type
     ]);

@@ -7,10 +7,17 @@ class PayInRequestDemo
     /**
      * @throws Exception
      */
-    public function doTransaction($env, $merchant_id, $merchant_secret,
-                                  $private_key, $payment_method, $payer_name,
-                                  $amount, $redirect_url, $callback_url)
+    public function doTransaction($params)
     {
+        $env = $params['env'];
+        $merchant_id = $params['merchant_id'];
+        $merchant_secret = $params['merchant_secret'];
+        $private_key = $params['private_key'];
+        $payment_method = $params['payment_method'];
+        $payer_name = $params['payer_name'];
+        $amount = $params['amount'];
+        $redirect_url = $params['redirect_url'];
+        $callback_url = $params['callback_url'];
 
         //production
         $requestPath = "";
@@ -130,9 +137,17 @@ try {
     $amount = 10000;
     $redirect_url = "https://docs.smilepayz.com";
     $callback_url = "https://docs.smilepayz.com";
-    $obj->doTransaction($env, $merchant_id, $merchant_secret,
-        $private_key, $payment_method, $payer_name,
-        $amount, $redirect_url, $callback_url);
+    $obj->doTransaction([
+        'env' => $env,
+        'merchant_id' => $merchant_id,
+        'merchant_secret' => $merchant_secret,
+        'private_key' => $private_key,
+        'payment_method' => $payment_method,
+        'payer_name' => $payer_name,
+        'amount' => $amount,
+        'redirect_url' => $redirect_url,
+        'callback_url' => $callback_url
+    ]);
 } catch (Exception $e) {
     echo 'do transaction error' . $e;
 }
